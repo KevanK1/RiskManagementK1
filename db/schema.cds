@@ -1,5 +1,7 @@
 namespace RiskManagementK1;
 
+using { API_BUSINESS_PARTNER.A_BusinessPartner } from '../srv/external/OP_API_BUSINESS_PARTNER_SRV';
+
 entity Risks
 {
     key ID : UUID;
@@ -9,6 +11,7 @@ entity Risks
     impact : Integer;
     criticality : Integer;
     mitigation : Association to one Mitigations;
+    a_BusinessPartner : Association to one A_BusinessPartner;
 }
 
 entity Mitigations
