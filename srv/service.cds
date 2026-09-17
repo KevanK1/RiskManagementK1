@@ -28,7 +28,7 @@ service RiskManagementK1Service
         };
 }
 
-annotate RiskManagementK1Service with @requires :
-[
-    'authenticated-user'
-];
+// annotate RiskManagementK1Service with @requires :
+// [
+//     'authenticated-user'
+// ];

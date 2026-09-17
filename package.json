@@ -1,39 +1,40 @@
 {
-  "name": "RiskManagementK1",
-  "version": "1.0.0",
-  "type": "module",
-  "dependencies": {
-    "@cap-js/hana": "^3",
-    "@sap/cds": "^10",
-    "@sap-cloud-sdk/connectivity": "^4",
-    "@sap-cloud-sdk/http-client": "^4",
-    "@sap-cloud-sdk/resilience": "^4"
-  },
-  "devDependencies": {
-    "@cap-js/sqlite": "^3",
-    "cds-plugin-ui5": "^0.17.0"
-  },
-  "scripts": {
-    "start": "cds-serve",
-    "watch-risks": "cds watch --open riskmanagement.risks/index.html?sap-ui-xx-viewCache=false --livereload false"
-  },
-  "private": true,
-  "cds": {
-    "requires": {
-      "OP_API_BUSINESS_PARTNER_SRV": {
-        "kind": "odata-v2",
-        "model": "srv/external/OP_API_BUSINESS_PARTNER_SRV"
-      },
-      "API_BUSINESS_PARTNER": {
-        "kind": "odata-v2",
-        "model": "srv/external/OP_API_BUSINESS_PARTNER_SRV"
-      }
-    }
-  },
-  "workspaces": [
-    "app/*"
-  ],
-  "sapux": [
-    "app/risks"
-  ]
+	"name": "RiskManagementK1",
+	"version": "1.0.0",
+	"type": "module",
+	"dependencies": {
+		"@cap-js/hana": "^3",
+		"@sap/cds": "^10",
+		"@sap-cloud-sdk/connectivity": "^4",
+		"@sap-cloud-sdk/http-client": "^4",
+		"@sap-cloud-sdk/resilience": "^4"
+	},
+	"devDependencies": {
+		"@cap-js/sqlite": "^3",
+		"cds-plugin-ui5": "^0.17.0",
+		"@sap/dev-cap-tools": "^1.31.0"
+	},
+	"scripts": {
+		"start": "cds-serve",
+		"watch-risks": "cds watch --open riskmanagement.risks/index.html?sap-ui-xx-viewCache=false --livereload false"
+	},
+	"private": true,
+	"cds": {
+		"requires": {
+			"OP_API_BUSINESS_PARTNER_SRV": {
+				"kind": "odata-v2",
+				"model": "srv/external/OP_API_BUSINESS_PARTNER_SRV"
+			},
+			"API_BUSINESS_PARTNER": {
+				"kind": "odata-v2",
+				"model": "srv/external/OP_API_BUSINESS_PARTNER_SRV"
+			}
+		}
+	},
+	"workspaces": [
+		"app/*"
+	],
+	"sapux": [
+		"app/risks"
+	]
 }
